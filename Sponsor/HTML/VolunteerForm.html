@@ -31,6 +31,40 @@
 			box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
 			padding-bottom: 20px;
 		}
+		div.nav {
+			margin: 0%;
+			padding: 2%;
+			background-color: rgba(0, 0, 0, 0.23);
+		}
+		.header img {
+			float: left;
+			width: 100px;
+			height: 75px;
+		}
+
+		img.icon {
+			float: right;
+			margin-right: 2%;
+		padding: 0%;
+		}
+		img.header {
+			top: 20px;
+			float: left;
+			margin: 0%;
+			padding: 0%;
+			position: absolute;
+		}
+		.hov{
+			color: whitesmoke;
+			text-decoration: none;
+			padding: 10px;
+			margin: 10px;
+			font-size: 18px;
+			font-family: Helvetica;
+		}
+		.hov:hover {
+			color: aqua;
+		}
 		
 		.container h2{
 			background-color: #407d3d;
@@ -55,7 +89,7 @@
 			margin-top: 40px;
 			text-align: center;
 		}
-		a {
+		.last {
 			text-decoration: none;
 			color: #afe3ac;
 		}
@@ -67,7 +101,7 @@
 			margin-left: 610px;
 			border-radius: 10px;
 		}
-		a:hover {
+		.last:hover {
 			color: #407d3d;
 			background-color: #afe3ac;
 			width: 40%;
@@ -209,7 +243,22 @@
 	</style>
 </head>
 <body>
-    <h3>“You make a living by what you get. You make a life by what you give.”</h3>
+    <div class="nav">
+			<div class="header">
+				<img class="header" src="../MEDIA/logo.png" alt="icon">
+			</div>
+			<div align="right" class="options">
+				<a href="https://morenojoanhazel.github.io/CIP1101_FinalProject/INDEX.HTML" class="hov">HOME</a>
+				<a href="https://ot5cito.github.io/Fuerte_CIP_Group3/AboutUs/HTML/AboutUs.html" class="hov">ABOUT US</a>
+				<a href="https://masteriguin.github.io/FindAPet/Findpet.html" class="hov">FIND A PET</a>
+				<a href="https://fontanilla-annabeatrize.github.io/cip1101-fontanilla/HTML/ourpets_landingpage.html" class="hov">OUR PETS</a>
+				<a href="https://arvileal12.github.io/PETCONTACTUS-/LEAL_GROUP3_CONTACTUS/HTML/contactus.html" class="hov">CONTACT US</a>
+				<a href="https://dyape.github.io/MANASIS_ITAD/GROUP%20PROJECT/FAQ'S/HTML/faq's.html" class="hov">FAQs</a>
+				<a href="https://jethrotatco.github.io/AUTHORSLOVESTRAY/AUTHORS/HTML/authors-itad.html" class="hov">AUTHORS</a>
+
+			</div>
+		</div>
+	<h3>“You make a living by what you get. You make a life by what you give.”</h3>
 	<div class="container">
         <h2>Volunteer Registration Form</h2>
 		<form method="POST">
@@ -310,7 +359,7 @@
 		</form>
 	</div>
 	<br>
-	<h5><a href="Sponsor.html">GO BACK</a></h5>
+	<h5><a href="Sponsor.html" class="last">GO BACK</a></h5>
 	<br>
 </body>
 </html>
