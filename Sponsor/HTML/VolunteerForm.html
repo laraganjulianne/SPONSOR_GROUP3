@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Form</title>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel = "icon" href ="../MEDIA/logo.png" type = "image/x-icon">
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body{
+			background-color: #f5f5f5;
+			font-family: Verdana, Helvetica, sans-serif;
+			background: url(../MEDIA/stray.png);
+			background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+		}
+		.container{
+			background-color: #afe3ac;
+			width: 500px;
+			padding: 30px;
+			margin: 25px auto 0;
+			border-radius: 10px;
+			box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+			padding-bottom: 20px;
+		}
+		
+		.container h2{
+			background-color: #407d3d;
+			color: #fff;
+			font-size: 24px;
+			padding: 10px;
+			margin-bottom: 20px;
+			text-align: center;
+			border: 1px dotted #333;
+		}
+		h4{
+			text-align: center;
+			padding-bottom: 5px;
+			color:  #407d3d;
+		}
+		h3 {
+			color: #afe3ac;
+			font-family: 'Segoe UI', Helvetica, Sans-serif;
+			font-size: 17px;
+			margin-left:420px;
+			margin-right:420px;
+			margin-top: 40px;
+			text-align: center;
+		}
+		a {
+			text-decoration: none;
+			color: #afe3ac;
+		}
+		h5 {
+			background-color: #407d3d;
+			width: 8%;
+			padding: 10px;
+			text-align: center;
+			margin-left: 610px;
+			border-radius: 10px;
+		}
+		a:hover {
+			color: #407d3d;
+			background-color: #afe3ac;
+			width: 40%;
+			padding: 10px;
+			border-radius: 10px
+		}
+		.input-group{
+			margin-bottom: 8px;
+			width: 100%;
+			position: relative;
+			display: flex;
+			flex-direction: row;
+			padding: 5px 0;
+		}
+		.input-box{
+			width: 100%;
+			margin-right: 12px;
+			position: relative;
+		}
+		.input-box:last-child{
+			margin-right: 0;
+		}
+		.name{
+			padding: 14px 10px 14px 50px;
+			width: 100%;
+			background-color: #fcfcfc;
+			border: 1px solid #00000033;
+			outline: none;
+			letter-spacing: 1px;
+			transition: 0.3s;
+			border-radius: 3px;
+			color: #333;
+		}
+		.name:focus, .dob:focus{
+			-webkit-box-shadow:0 0 2px 1px #7ed32180;
+			-moz-box-shadow:0 0 2px 1px #7ed32180;
+			box-shadow: 0 0 2px 1px #7ed32180;
+			border: 1px solid #807334;
+		}
+		.input-box .icon{
+			width: 50px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			bottom: 0px;
+			color: #333;
+			background-color: #f1f1f1;
+			border-radius: 2px 0 0 2px;
+			transition: 0.3s;
+			font-size: 20px;
+			pointer-events: none;
+			border: 1px solid #00000033;
+			border-right: none;
+		}
+		.name:focus + .icon{
+			background-color: #407d3d;
+			color: #fff;
+			border-right: 1px solid #7ed321;
+			border: none;
+			transition: 1s;
+		}
+		.dob{
+			width: 30%;
+			padding: 14px;
+			text-align: center;
+			background-color: #fcfcfc;
+			transition: 0.3s;
+			outline: none;
+			border: 1px solid #407d3d;
+			border-radius: 3px;
+		}
+		.radio{
+			display: none;
+		}
+		.input-box label{
+			width: 50%;
+			padding: 13px;
+			background-color: #fcfcfc;
+			display: inline-block;
+			float: left;
+			text-align: center;
+			border: 1px solid #407d3d;
+		}
+		.input-box label:first-of-type{
+			border-top-left-radius: 3px;
+			border-bottom-left-radius: 3px;
+			border-right: none;
+		}
+		.input-box label:last-of-type{
+			border-top-right-radius: 3px;
+			border-bottom-right-radius: 3px;
+		}
+		.radio:checked + label{
+			background-color: #407d3d;
+			color: #fff;
+			transition: 0.5s;
+		}
+		.input-box select{
+			color: #fff;
+			display: inline-block;
+			width: 33%;
+			padding: 12px;
+			padding-left: 0px;
+			background-color: #407d3d;
+			float: left;
+			text-align: center;
+			font-size: 16px;
+			outline: none;
+			border: 1px solid #afe3ac;
+			cursor: pointer;
+			transition: all 0.2s ease;
+		}
+		.input-box select:focus{
+			background-color:  #407d3d;
+			color: #fff;
+			text-align: center;
+		}
+		.fa fa-mobile icon {
+			margin-top: 20px;
+		}
+		button{
+			width: 100%;
+			background: transparent;
+			border: none;
+			background: #407d3d;
+			color: #fff;
+			padding: 15px;
+			border-radius: 4px;
+			font-size: 16px;
+			transition: all 0.35s ease;
+		}
+		button:hover{
+			cursor: crosshair;
+			background-color: #ada472;
+		}
+	</style>
+</head>
+<body>
+    <h3>“You make a living by what you get. You make a life by what you give.”</h3>
+	<div class="container">
+        <h2>Volunteer Registration Form</h2>
+		<form method="POST">
+		<h4>Contact Information</h4>
+		<div class="input-group">
+			<div class="input-box">
+				<input type="text" placeholder="Full Name" required class="name">
+				<i class="fa fa-user icon"></i>
+			</div>
+		</div>
+		<div class="input-group">
+			<div class="input-box">
+				<input type="email" placeholder="Email Address" required class="name">
+				<i class="fa fa-envelope icon"></i>
+			</div>
+		</div>
+		<div class="input-group">
+			<div class="input-box">
+                
+				<input type="tel" placeholder="Phone/Telephone Number" required class="name">
+                <i class="fa fa-phone icon"></i>
+            </div>
+		</div>
+		<div class="input-group">
+			<div class="input-box">
+				<h4>Gender</h4>
+				<input type="radio" id="b1" name="gender" checked class="radio">
+				<label for="b1">Male</label>
+				<input type="radio" id="b2" name="gender" class="radio">
+				<label for="b2">Female</label>
+			</div>
+		</div>
+		<div class="input-group">
+            <div class="input-box">
+                <input type="tel" placeholder="Country" required class="name">
+                <i class="fa fa-flag icon"></i>
+            </div>
+			<div class="input-box">
+				<select>
+					<option>01</option>
+					<option>02</option>
+					<option>03</option>
+					<option>04</option>
+					<option>05</option>
+					<option>06</option>
+					<option>07</option>
+					<option>08</option>
+					<option>09</option>
+					<option>10</option>
+					<option>11</option>
+					<option>12</option>
+					<option>13</option>
+					<option>14</option>
+					<option>15</option>
+					<option>16</option>
+					<option>17</option>
+					<option>18</option>
+					<option>19</option>
+					<option>20</option>
+					<option>21</option>
+					<option>22</option>
+					<option>23</option>
+					<option>24</option>
+					<option>25</option>
+					<option>26</option>
+					<option>27</option>
+					<option>28</option>
+					<option>29</option>
+					<option>30</option>
+					<option>31</option>
+				</select>
+				<select>
+					<option>Jan</option>
+					<option>Feb</option>
+					<option>Mar</option>
+					<option>Apr</option>
+					<option>May</option>
+					<option>Jun</option>
+					<option>Jul</option>
+					<option>Aug</option>
+					<option>Sep</option>
+					<option>Oct</option>
+					<option>Nov</option>
+					<option>Dec</option>
+				</select>
+				<select>
+					<option>2022</option>
+					<option>2023</option>
+					<option>2024</option>
+				</select>
+			</div>
+		</div>
+		<div class="input-group">
+            <div class="input-box">
+                <button type="submit">REGISTER</button>
+            </div>
+		</div>
+		</form>
+	</div>
+	<br>
+	<h5><a href="Sponsor.html">GO BACK</a></h5>
+	<br>
+</body>
+</html>
